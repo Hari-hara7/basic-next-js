@@ -1,8 +1,8 @@
 'use client'; // Place this at the very top
 
 // Import the BlogPost type and blogPosts array from the correct file
-import { BlogPost } from "../../data/blogPosts";  // Adjust the path as necessary
-import blogPosts from "../../data/blogPosts";
+import { BlogPost } from "../../../data/blogPosts";  // Adjust the path as necessary
+import blogPosts from "../../../data/blogPosts";
 
 interface PageProps {
   params: { id: string };
