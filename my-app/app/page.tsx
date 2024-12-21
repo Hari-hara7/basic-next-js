@@ -1,15 +1,14 @@
-import BlogCard from "../components/BlogCard";
+import BlogList from "../components/BlogList";
 import blogPosts from "../data/blogPosts";
 
 export default function Home() {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center mb-6">Welcome to Our Blog</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogPosts.map((post: { slug: string; title: string; content: string }) => (
-          <BlogCard key={post.slug} post={post} />
-        ))}
-      </div>
+    <div>
+      <header className="text-center py-12 bg-gradient-to-r from-blue-400 to-purple-600 text-white rounded-lg">
+        <h1 className="text-4xl font-bold">Welcome to Medium Blog</h1>
+        <p className="mt-2">Discover the latest articles and insights.</p>
+      </header>
+      <BlogList posts={blogPosts} />
     </div>
   );
 }

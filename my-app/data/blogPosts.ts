@@ -1,27 +1,32 @@
-const blogPosts = [
+export interface BlogPost {
+    id: string;
+    title: string;
+    excerpt: string;
+    content: string;
+    image: string;
+  }
+  
+  const blogPosts: BlogPost[] = [
     {
-      title: "The Future of Web Development",
-      slug: "future-of-web-development",
-      image: "/images/blog1.jpg",
-      date: "June 20, 2024",
-      excerpt: "Web development is evolving rapidly. Here's what to expect in the coming years...",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+      id: "1",
+      title: "Getting Started with ShadCN",
+      excerpt: "Learn the basics of ShadCN UI in this beginner-friendly guide.",
+      content: "Full blog content goes here...",
+      image: "/images/blog-image.jpg",  // Adjusted to refer to /images/ folder
     },
     {
-      title: "How to Learn JavaScript Fast",
-      slug: "learn-javascript-fast",
-      image: "/images/blog2.jpg",
-      date: "June 18, 2024",
-      excerpt: "Want to master JavaScript quickly? Follow these steps to get started today...",
-      content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."
+      id: "2",
+      title: "Building Responsive UI with Tailwind",
+      excerpt: "Discover how to create stunning responsive designs.",
+      content: "Full blog content goes here...",
+      image: "/images/blog-image2.jpg",  // Adjusted to refer to /images/ folder
     },
     {
-      title: "10 Tips for Effective Remote Work",
-      slug: "remote-work-tips",
-      image: "/images/blog3.jpg",
-      date: "June 15, 2024",
-      excerpt: "Remote work can be challenging. Use these tips to stay productive and focused...",
-      content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..."
+      id: "3",
+      title: "TypeScript Tips for Next.js",
+      excerpt: "Enhance your Next.js projects with these TypeScript tips.",
+      content: "Full blog content goes here...",
+      image: "/images/blog-image3.jpg",  // Adjusted to refer to /images/ folder
     },
   ];
   

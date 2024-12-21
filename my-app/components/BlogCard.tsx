@@ -1,26 +1,22 @@
+import Link from "next/link";
+import { BlogPost } from "../data/blogPosts";
+
 interface BlogCardProps {
-    post: {
-      title: string;
-      slug: string;
-      image: string;
-      date: string;
-      excerpt: string;
-    };
-  }
-  
-  export default function BlogCard({ post }: BlogCardProps) {
-    return (
-      <div className="bg-dark shadow-md rounded-lg overflow-hidden">
-        <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
-        <div className="p-4">
-          <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-          <p className="text-sm text-gray-500 mb-4">{post.date}</p>
-          <p className="text-gray-700 mb-4">{post.excerpt}</p>
-          <a href={`/blog/${post.slug}`} className="text-blue-500 hover:underline">
-            Read More →
-          </a>
-        </div>
+  post: BlogPost;
+}
+
+export default function BlogCard({ post }: BlogCardProps) {
+  return (
+    <Link href={`/blog/${post.id}`}>
+      <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-40 object-cover rounded-md"
+        />
+        <h2 className="mt-4 text-xl font-bold">{post.title}</h2>
+        <p className="mt-2 text-sm text-gray-600">{post.excerpt}</p>
       </div>
-    );
-  }
-  
+    </Link>
+  );
+}
