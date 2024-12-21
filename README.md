@@ -16,7 +16,7 @@ A modern, responsive blog built using Next.js and ShadCN UI components. This blo
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Hari-hara7/basic-next-js.git](https://github.com/Hari-hara7/basic-next-js.git)
+   git clone [https://github.com/Hari-hara7/basic-next-js.git]
    cd medium-blog
 
 
