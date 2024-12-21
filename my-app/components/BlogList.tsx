@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 
+
 interface BlogPost {
   id: string;
   title: string;
