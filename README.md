@@ -18,3 +18,9 @@ A modern, responsive blog built using Next.js and ShadCN UI components. This blo
    ```bash
    git clone https://github.com/your-username/medium-blog.git
    cd medium-blog
+
+
+
+## Project Structure
+
+![Top Image](structure.png) <!-- Replace with your actual image path -->
