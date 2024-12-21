@@ -25,6 +25,7 @@ export default function BlogPostPage() {
 
   return (
     <div>
+      <img src={post.image} alt={post.title} style={{ maxWidth: '50%', height: 'auto' }} />
       <h1>{post.title}</h1>
       <p>{post.content}</p>
     </div>
