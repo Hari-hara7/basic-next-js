@@ -1,8 +1,7 @@
-import { useRouter } from "next/router";
-import blogPosts, { BlogPost } from "../../data/blogPosts"; // Import blogPosts and BlogPost type
+'use client'; // Place this at the very top
 
-// Use the "use client" directive if you're using hooks
-'use client';
+import { useRouter } from "next/router";
+import blogPosts, { BlogPost } from "../../data/blogPosts";
 
 export default function BlogPostPage() {
   const { query } = useRouter();  // This is where the `id` param comes from
