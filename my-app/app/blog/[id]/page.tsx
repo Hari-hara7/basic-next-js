@@ -1,19 +1,31 @@
-import { useParams } from "next/navigation";
-import blogPosts from "../../../data/blogPosts";
+// app/blog/[id]/page.tsx
+'use client';
 
-export default function BlogPostPage() {
-  const { id } = useParams();
-  const post = blogPosts.find((post) => post.id === id);
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-  if (!post) {
-    return <div>Post not found</div>;
-  }
+const BlogPostPage = () => {
+  const router = useRouter();
+  const { id } = router.query;  // Fetch the dynamic id from the URL
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    if (id) {
+      // Fetch data based on the post id
+      fetch(`/api/blog/${id}`)
+        .then((response) => response.json())
+        .then((data) => setPost(data));
+    }
+  }, [id]);
+
+  if (!post) return <p>Loading...</p>;
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <img src={post.image} alt={post.title} className="w-full rounded-md mb-4" />
-      <p className="text-gray-700">{post.content}</p>
+    <div>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
     </div>
   );
-}
+};
+
+export default BlogPostPage;
